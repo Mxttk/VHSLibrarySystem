@@ -1,0 +1,249 @@
+﻿<Window x:Class="VHSLibrarySystem.ReplaceBooks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VHSLibrarySystem"
+        mc:Ignorable="d"
+        Title="ReplaceBooks" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowState="Maximized">
+
+    <Window.Resources>
+        <DataTemplate x:Key="listBoxItemTemplate">
+            <TextBlock Text="{Binding Code}" 
+                       Foreground="FloralWhite"
+                       FontFamily="VCR OSD Mono"
+                       Padding="10 10 10 10"
+                       FontSize="20"
+                       TextAlignment="Center"/>
+        </DataTemplate>
+
+        <Style x:Key="hoverStyle" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <TranslateTransform Y="-5" />
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+    </Window.Resources>
+
+
+    <Border BorderThickness="5" BorderBrush="Black">
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Image                 
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="3" 
+                   Grid.RowSpan="7"
+                   x:Name="bgImg"
+                   Stretch="Fill"/>
+
+            <Border HorizontalAlignment="Right"
+                    Width="210"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Grid.RowSpan="2"
+                    BorderBrush="DimGray"
+                    BorderThickness="1"
+                    Margin="5 5 5 5"
+                    Panel.ZIndex="2">
+                <Grid Grid.Row="0"
+                  Grid.Column="0"
+                  Grid.RowSpan="2">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Opacity="0.3"
+                        Background="Black"/>
+
+                    <Image Grid.Column="0"
+                   x:Name="recordGifRB" 
+                   Stretch="Uniform"
+                   Margin="5 5 5 5"
+                   Panel.ZIndex="2"/>
+
+
+                    <TextBox x:Name="musicPlayerBoxRB"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Top"
+                     Foreground="FloralWhite"
+                     FontSize="15"
+                     FontWeight="Bold" 
+                     Grid.Column="1"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     Padding="5 5 5 5"
+                     TextWrapping="Wrap"
+                     TextAlignment="Center"
+                     FontFamily="VCR OSD Mono"
+                     Opacity="1">
+                    </TextBox>
+
+                </Grid>
+            </Border>
+
+
+
+
+
+            <Grid 
+                Grid.Column="0" 
+                Grid.Row="4" 
+                Grid.RowSpan="7"
+                Margin="10 0 0 0"
+                Panel.ZIndex="1">
+
+                <Image
+                       Margin="0 0 0 0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Stretch="UniformToFill"
+                       Source="pack://application:,,,/Assets/pixelMonitor.png"/>
+
+                <ListBox x:Name="listBoxRandom" 
+                     ItemTemplate="{StaticResource ResourceKey=listBoxItemTemplate}"
+                     Grid.Column="0" 
+                     Grid.Row="4" 
+                     Grid.RowSpan="7"
+                     Margin="40 40 50 150"
+                     AllowDrop="True"
+                     BorderBrush="Black"
+                     Background="Transparent"
+                     PreviewMouseLeftButtonDown="listBoxRandom_PreviewMouseLeftButtonDown"
+                     PreviewMouseMove="listBoxRandom_PreviewMouseMove"
+                     Drop="listBoxDrop"
+                     Panel.ZIndex="1">
+
+                </ListBox>
+                <Image Panel.ZIndex="0" Margin="40 40 50 150" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="5" x:Name="VHSGIFListboxRandom" Stretch="UniformToFill"/>
+            </Grid>
+
+            <Grid 
+                Grid.Column="2" 
+                Grid.Row="4" 
+                Grid.RowSpan="7"
+                Panel.ZIndex="1">
+
+
+                <Image
+                       Margin="10 0 10 0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Stretch="UniformToFill"
+                       Source="pack://application:,,,/Assets/pixelMonitor.png"/>
+
+                <ListBox x:Name="listBoxAnswer"
+                Grid.Column="2" 
+                Grid.Row="2"
+                Grid.RowSpan="7"
+                Margin="50 45 50 155"
+                AllowDrop="True"
+                Drop="listBoxDrop"
+                Background="Transparent"
+                BorderBrush="Black"
+                Panel.ZIndex="1"
+                ItemTemplate="{StaticResource ResourceKey=listBoxItemTemplate}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+
+                <Image Panel.ZIndex="0" Margin="48 45 50 150" Grid.Row="4" Grid.ColumnSpan="1" Grid.RowSpan="5" x:Name="VHSGIFListboxAnswer" Stretch="UniformToFill"/>
+
+            </Grid>
+
+            <Grid
+                  Height="160"
+                  Width="160"
+                  Grid.Column="1"
+                  Grid.Row="6"
+                  Grid.RowSpan="6"
+                  HorizontalAlignment="Center"
+                  Panel.ZIndex="1">
+
+                <Button x:Name="btnSubmit"
+                        Width="160"
+                        Height="160"
+                        Grid.RowSpan="4"
+                        Background="Transparent"
+                        Click="btnSubmit_Click"
+                        BorderBrush="Transparent"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                    <Image Width="160" Height="160" x:Name="imgButton" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform"/>
+                </Button>
+            </Grid>
+
+            <Grid 
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.RowSpan="6"
+                Margin="0,35,0,0"
+                Panel.ZIndex="0">
+                <Image HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill" Source="pack://application:,,,/Assets/8bitTable.jpeg"/>
+            </Grid>
+
+
+
+            <Button x:Name="btnBack"
+                    Grid.Column="0" 
+                    Grid.Row="0" 
+                    Width="70" 
+                    Height="70" 
+                    Grid.RowSpan="2"
+                    HorizontalAlignment="Left" 
+                    Margin="35 0 0 0"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Click="btnBack_Click">
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource hoverStyle}"/>
+                </Button.Style>
+                <StackPanel>
+                    <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="pack://application:,,,/Icons/backArrow.png" Width="68" Height="68"/>
+                </StackPanel>
+            </Button>
+
+
+        </Grid>
+    </Border>
+</Window>

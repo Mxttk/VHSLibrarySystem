@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RMFv0S3VpVNgv1ecOGFgjewvY9aSAvn+DNhDePBeexYnfqgEuTBtpLOEyEM8vPeJkQcNUb3bo14uqYCTuWJ3mQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mattd\\source\\repos\\VHSLibrarySystem\\VHSLibrarySystem\\VHSLibrarySystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mattd\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

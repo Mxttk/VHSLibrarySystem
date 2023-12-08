@@ -1,0 +1,113 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="8bitTable.jpeg" />
+    <None Remove="Assets\8bitTable.jpeg" />
+    <None Remove="Assets\arcade.gif" />
+    <None Remove="Assets\bg-test-two.gif" />
+    <None Remove="Assets\bg-test.gif" />
+    <None Remove="Assets\bg.gif" />
+    <None Remove="Assets\button-bg.png" />
+    <None Remove="Assets\cat-bg.png" />
+    <None Remove="Assets\city-skyline.gif" />
+    <None Remove="Assets\night-drive-crop.gif" />
+    <None Remove="Assets\pixel-store-crop.gif" />
+    <None Remove="Assets\pixelMonitor.png" />
+    <None Remove="Assets\rainybg.gif" />
+    <None Remove="Assets\reset.png" />
+    <None Remove="Assets\test-bg.gif" />
+    <None Remove="Assets\VHS.gif" />
+    <None Remove="Assets\VHSLibrary-Tape.png" />
+    <None Remove="Assets\widearcadebg.gif" />
+    <None Remove="BackgroundGifs\arcademachines.gif" />
+    <None Remove="BackgroundGifs\callNumBg1.gif" />
+    <None Remove="BackgroundGifs\callnumbg2.gif" />
+    <None Remove="BackgroundGifs\callNumBg3.gif" />
+    <None Remove="BackgroundGifs\testbg.gif" />
+    <None Remove="btnUp.png" />
+    <None Remove="exit.png" />
+    <None Remove="Gifs\cat0.gif" />
+    <None Remove="Gifs\cat1.gif" />
+    <None Remove="Gifs\cat2.1.gif" />
+    <None Remove="Gifs\cat2.2.gif" />
+    <None Remove="Gifs\cat2.3.gif" />
+    <None Remove="Gifs\cat2.4.gif" />
+    <None Remove="Gifs\cat2.5.gif" />
+    <None Remove="Gifs\cat2.6.gif" />
+    <None Remove="Gifs\cat2.gif" />
+    <None Remove="Gifs\cat3.gif" />
+    <None Remove="Gifs\cat4.gif" />
+    <None Remove="Gifs\record-spinning.gif" />
+    <None Remove="Icons\backArrow.png" />
+    <None Remove="Icons\exit.png" />
+    <None Remove="Icons\fullscreen-exit.ico" />
+    <None Remove="Icons\fullscreen.png" />
+    <None Remove="Icons\next.png" />
+    <None Remove="Icons\play.png" />
+    <None Remove="Icons\viewfullscreen.ico" />
+    <None Remove="next.png" />
+    <None Remove="pixelMonitor.png" />
+    <None Remove="play.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\8bitTable.jpeg" />
+    <Resource Include="Assets\arcade.gif" />
+    <Resource Include="Assets\bg-test-two.gif" />
+    <Resource Include="Assets\bg-test.gif" />
+    <Resource Include="Assets\bg.gif" />
+    <Resource Include="Assets\btnUp.png" />
+    <Resource Include="Assets\button-bg.png" />
+    <Resource Include="Assets\cat-bg.png" />
+    <Resource Include="Assets\city-skyline.gif" />
+    <Resource Include="Assets\night-drive-crop.gif" />
+    <Resource Include="Assets\pixel-store-crop.gif" />
+    <Resource Include="Assets\pixelMonitor.png" />
+    <Resource Include="Assets\reset.png" />
+    <Resource Include="Assets\widearcadebg.gif" />
+    <Resource Include="Assets\rainybg.gif" />
+    <Resource Include="Assets\test-bg.gif" />
+    <Resource Include="Assets\VHSLibrary-Tape.png" />
+    <Resource Include="BackgroundGifs\arcademachines.gif" />
+    <Resource Include="Assets\buttonpress.gif" />
+    <Resource Include="Assets\VHS.gif" />
+    <Resource Include="Assets\exit.png" />
+    <Resource Include="BackgroundGifs\callnumbg1.gif" />
+    <Resource Include="BackgroundGifs\callnumbg3.gif" />
+    <Resource Include="BackgroundGifs\callnumbg2.gif" />
+    <Resource Include="BackgroundGifs\testbg.gif" />
+    <Resource Include="Gifs\cat0.gif" />
+    <Resource Include="Gifs\cat1.gif" />
+    <Resource Include="Gifs\cat2.1.gif" />
+    <Resource Include="Gifs\cat2.2.gif" />
+    <Resource Include="Gifs\cat2.3.gif" />
+    <Resource Include="Gifs\cat2.4.gif" />
+    <Resource Include="Gifs\cat2.5.gif" />
+    <Resource Include="Gifs\cat2.6.gif" />
+    <Resource Include="Gifs\cat2.gif" />
+    <Resource Include="Gifs\cat3.gif" />
+    <Resource Include="Gifs\cat4.gif" />
+    <Resource Include="Gifs\record-spinning.gif" />
+    <Resource Include="Icons\backArrow.png" />
+    <Resource Include="Icons\exit.png" />
+    <Resource Include="Icons\fullscreen-exit.ico" />
+    <Resource Include="Icons\fullscreen.png" />
+    <Resource Include="Icons\next.png" />
+    <Resource Include="Icons\play.png" />
+    <Resource Include="Icons\viewfullscreen.ico" />
+    <Resource Include="Assets\next.png" />
+    <Resource Include="Assets\play.png" />
+  </ItemGroup>
+
+</Project>
